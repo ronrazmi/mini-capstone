@@ -1,0 +1,18 @@
+<h2> Please Enter Your Product Below </h2>
+
+<%= form_tag '/products', method: :post do %>
+
+	<%= label_tag :name %>
+	<%= text_field_tag :name %>
+
+	<%= label_tag :price %> 
+	<%= text_field_tag :price %> 
+
+	<%= label_tag :description %> 
+	<%= text_field_tag :description %> 
+
+	<%= submit_tag 'Post this product' %>
+
+ 
+
+	<% end %>

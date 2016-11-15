@@ -1,0 +1,14 @@
+<h2> Here are our products: </h2>
+
+
+
+<% @allproducts.each do |product| %>
+<%= product.name %> 
+
+<img src="<%= product.image %>">
+<p> <%= product.price %> </p>
+<p> <%= product.description %> </p>
+<p> ***************************** </p>
+	
+<% end %>
+
