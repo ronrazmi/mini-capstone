@@ -1,13 +1,12 @@
-<h2> Here are the products: </h2>
+<h1> Here are the products: </h1>
 
 
-<% @allproducts.each_slice(3) do |three_products| %>
+<% @products.each_slice(3) do |three_products| %>
 <div class="row">
 <% three_products.each do |product| %>
+<div class="col-md-4">
 
-< div class="col-md-4" >
-
-<h3> <a href="/products/<%= product.id %>"><%= product.name %> </a> </h3>
+<h2> <a href="/products/<%= product.id %>"><%= product.name %> </a> </h2>
 
 
 <h3> Product Image: </h3>
@@ -18,6 +17,13 @@
 
 <h3> Product Description: </h3>
 <p> <%= product.description %> </p>
+
+<h3> Stocked : </h3>
+ <% if product.stocked %> 
+<p> Yes </p>
+<% else %> 
+<p> No </p>
+<% end %>
 
 </div>
 <% end %>

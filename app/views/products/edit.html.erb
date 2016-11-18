@@ -11,8 +11,9 @@
 	<p> <%= label_tag :description %> </p>
 	<%= text_field_tag :description, @product.description %> 
 
-	
+<p> <%= label_tag :stocked %> </p>
+	<%= text_field_tag :stocked, @product.stocked %> 
 
-	<p> <%= submit_tag %> </p>
+	<p> <%= submit_tag 'Apply Changes' %> </p>
 
 	<% end %>

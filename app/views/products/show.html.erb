@@ -6,10 +6,17 @@
 <h2> Product Price: </h2>
 <p> <%= @product.price %> </p>
 
+<h2> <%= @product.sale_message %> </h2>
+
 <h2> Product Description: </h2>
 <p> <%= @product.description %> </p>
 
-
+<h2> Stocked: </h2>
+ <% if @product.stocked %> 
+<p> Yes </p>
+ <% else %>
+<p> No </p>
+<% end %>
 
 <p><%= link_to "edit", "/products/#{@product.id}/edit" %></p>
 <p><%= link_to "Delete", "/products/#{@product.id}", method: :delete %></p>
